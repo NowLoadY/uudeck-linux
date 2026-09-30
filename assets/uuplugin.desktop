@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=网易UU加速器
+Name[zh_CN]=网易UU加速器
+Comment=网易UU主机加速器 (Steam Deck / Linux)
+Comment[zh_CN]=网易UU主机加速器 (Steam Deck / Linux)
+Exec=/usr/local/bin/uudeck-gui
+Icon=uuplugin
+Terminal=false
+Categories=Game;Network;
+StartupNotify=true
+Keywords=uu;uudeck;uuplugin;game;accelerator;加速器;网易;

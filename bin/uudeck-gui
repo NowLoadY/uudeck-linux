@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# ========================================================
+# 网易 UU 加速器桌面终端启动器
+# ========================================================
+
+# 寻找系统中可用的终端模拟器
+if command -v ptyxis >/dev/null 2>&1; then
+    exec ptyxis -T "网易UU主机加速器" -- /usr/local/bin/uudeck
+elif command -v gnome-terminal >/dev/null 2>&1; then
+    exec gnome-terminal --title="网易UU主机加速器" -- /usr/local/bin/uudeck
+elif command -v konsole >/dev/null 2>&1; then
+    exec konsole --title "网易UU主机加速器" -e /usr/local/bin/uudeck
+elif command -v x-terminal-emulator >/dev/null 2>&1; then
+    exec x-terminal-emulator -T "网易UU主机加速器" -e /usr/local/bin/uudeck
+elif command -v xfce4-terminal >/dev/null 2>&1; then
+    exec xfce4-terminal --title="网易UU主机加速器" -e /usr/local/bin/uudeck
+elif command -v alacritty >/dev/null 2>&1; then
+    exec alacritty --title "网易UU主机加速器" -e /usr/local/bin/uudeck
+elif command -v kitty >/dev/null 2>&1; then
+    exec kitty --title "网易UU主机加速器" /usr/local/bin/uudeck
+elif command -v xterm >/dev/null 2>&1; then
+    exec xterm -title "网易UU主机加速器" -e /usr/local/bin/uudeck
+else
+    exec /usr/local/bin/uudeck
+fi
